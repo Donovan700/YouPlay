@@ -1,0 +1,45 @@
+<!DOCTYPE>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Music Player</title>
+    <link rel="Stylesheet" href="Music.css" />
+</head>
+<body>
+    <div class="main">
+        <p id="logo">E-Music</p>
+        <div class="left">
+            <img id="track_image">
+            <div class="volume">
+            <p id="volume_show">90</p>
+            <i aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+            <i aria-hidden="true" id="Unmute_icon" onclick="unmute_sound()"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()">
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="show_song_no">
+            <p id="present">1</p>
+            <p>/</p>
+            <p id="total">5</p>
+        </div>
+        <p id="title">Title.mp3</p>
+        <p id="artist">Artist name</p>
+        <div class="middle">
+            <button onclick="previous_song()" id="pre"></button>
+            <button onclick="justplay()" id="play"></button>
+            <button onclick="next_song()" id="next"></button>
+        </div>
+        <br/>
+        <div class="duration">
+            <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+        </div>
+        <button id="auto" onclick="autoplay_switch()">Auto Play</button>
+    </div>
+
+</div>
+</body>
+<script src="Music.js"></script>
+</html>
